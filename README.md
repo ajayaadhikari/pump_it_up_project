@@ -1,10 +1,15 @@
-# Project Overview
-This project tackles a real-world challenge facing the Tanzanian Ministry of Water: ensuring access to clean water for all by keeping water pumps functional. Using data collected on water pumps across Tanzania, we develop a data-driven approach to identify pumps that are likely to fail, enabling proactive repairs and replacements. Our goals are to minimize costs and downtime, and maximize water accessibility for Tanzania’s population.
+# Tanzanian Water Pumps: Predictive Maintenance Solution
 
+## Project Overview
 
-# Folder Structure
-├── data/                                # Contains input datasets
-├── requirements.txt                     # Python dependencies (e.g. pandas, scikit-learn, matplotlib)
+This project addresses the challenge faced by the Tanzanian Ministry of Water in ensuring functional water pumps for all citizens. Using provided and supplementary datasets, advanced data analysis, and machine learning, the project aims to predict which pumps are likely to fail, enabling proactive repair and replacement. The output helps guide a cost-effective, time-efficient triage strategy to maximize water access.
+
+## Project Structure
+
+```
+.
+├── data/                                # Contains input datasets (raw and processed CSV files)
+├── requirements.txt                     # Python dependencies
 ├── src/                                 # Python scripts for the data science workflow
 │   ├── load_data.py                     # Loads and inspects datasets
 │   ├── preprocess.py                    # Data cleaning and feature engineering
@@ -13,29 +18,29 @@ This project tackles a real-world challenge facing the Tanzanian Ministry of Wat
 ├── output/                              # Outputs such as predictions, cleaned data, and generated plots
 ├── README.md                            # Project overview, setup instructions, usage guide
 └── .gitignore                           # Specifies files/folders to exclude from version control
+```
 
-# Workflow
-1) Clone the Repository
-Download or clone the project files to your local environment.
+## Getting Started
 
-2) Install Requirements
-Make sure you have Python (>=3.8). Install package dependencies using pip:
-```pip install -r requirements.txt```
+1. **Clone the Repository**
+    ```
+    git clone <repository-url>
+    cd <project-folder>
+    ```
 
-3) Place Data
-Download relevant data from DrivenData - Pump It Up and put the files inside the data/ folder.
+2. **Install Dependencies**
+    ```
+    pip install -r requirements.txt
+    ```
 
-Run Data Loader
-Test that you can load the dataset:
+3. **Download Datasets**
+    - Download the datasets from [DrivenData, Pump It Up](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/25/)
+    - Place the files inside the `data/` folder and change the data filenames in `load_data.py` accordingly.
 
-text
-python src/load_data.py
-Workflow
+4. **Workflow Steps**
+    - load data: `load_data.py`
+    - Clean and transform data: `python src/preprocess.py`
+    - Model and tune: `python src/crossvalidation_hyperparameter_tuning.py`
+    - Generate plots: `python src/plot.py`
+    - Outputs (predictions, figures) appear in `output/`
 
-Preprocess data with preprocess.py
-
-Model development/tuning in crossvalidation_hyperparameter_tuning.py
-
-Generate plots with plot.py
-
-Save outputs in output/ for use in presentation.
