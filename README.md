@@ -24,7 +24,7 @@ This project addresses the challenge faced by the Tanzanian Ministry of Water in
 
 1. **Clone the Repository**
     ```
-    git clone [<repository-url>](https://github.com/ajayaadhikari/pump_it_up_project.git)
+    git clone https://github.com/ajayaadhikari/pump_it_up_project.git
     cd pump_it_up_project
     ```
 
